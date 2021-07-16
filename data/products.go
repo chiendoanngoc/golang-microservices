@@ -59,11 +59,11 @@ func GetProducts() Products {
 }
 
 func AddProduct(p *Product) {
-	p.ID = GetNextID()
+	p.ID = getNextID()
 	productList = append(productList, p)
 }
 
-func GetNextID() int {
+func getNextID() int {
 	lp := productList[len(productList) - 1]
 	return lp.ID + 1
 }
